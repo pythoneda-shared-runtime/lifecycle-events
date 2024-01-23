@@ -4,7 +4,7 @@ pythoneda/shared/runtime/events/lifecycle/boot_requested.py
 
 This script defines the BootRequested class.
 
-Copyright (C) 2024-today rydnr's pythoneda-shared-runtime-events/lifecycle
+Copyright (C) 2024-today rydnr's pythoneda-shared-runtime/lifecycle-events
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

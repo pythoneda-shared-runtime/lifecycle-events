@@ -4,7 +4,7 @@ pythoneda/shared/runtime/events/lifecycle/booted.py
 
 This script defines the Booted class.
 
-Copyright (C) 2024-today rydnr's pythoneda-shared-runtime-events/lifecycle
+Copyright (C) 2024-today rydnr's pythoneda-shared-runtime/lifecycle-events
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -44,7 +44,7 @@ class Booted(Event):
         reconstructedPreviousEventIds: List[str] = None,
     ):
         """
-        Creates a new BootRequested instance.
+        Creates a new Booted instance.
         :param defUrl: The url of the definition repository.
         :type defUrl: str
         :param bootRequestedId: The id of the previous event.
