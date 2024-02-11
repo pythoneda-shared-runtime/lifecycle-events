@@ -38,14 +38,14 @@ class BootRequested(Event):
 
     def __init__(
         self,
-        defUrl: str,
+        url: str,
         previousEventId: str = None,
         reconstructedId: str = None,
         reconstructedPreviousEventIds: List[str] = None,
     ):
         """
         Creates a new BootRequested instance.
-        :param defUrl: The url of the definition repository.
+        :param defUrl: The url of the repository.
         :type defUrl: str
         :param previousEventId: The id of the previous event, if any.
         :type previousEventId: str
@@ -61,16 +61,16 @@ class BootRequested(Event):
         super().__init__(
             previous_events, reconstructedId, reconstructedPreviousEventIds
         )
-        self._def_url = defUrl
+        self._url = url
 
     @property
-    def def_url(self) -> str:
+    def url(self) -> str:
         """
-        Retrieves the url of the definition repository.
+        Retrieves the url of the repository.
         :return: Such url.
         :rtype: str
         """
-        return self._def_url
+        return self._url
 
 
 # vim: syntax=python ts=4 sw=4 sts=4 tw=79 sr et
