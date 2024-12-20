@@ -39,28 +39,19 @@ class Booted(Event):
     def __init__(
         self,
         defUrl: str,
-        bootRequestedId: str,
+        previousEventIds: List[str] = None,
         reconstructedId: str = None,
-        reconstructedPreviousEventIds: List[str] = None,
     ):
         """
         Creates a new Booted instance.
         :param defUrl: The url of the definition repository.
         :type defUrl: str
-        :param bootRequestedId: The id of the previous event.
-        :type bootRequestedId: str
+        :param previousEventIds: The id of the previous events.
+        :type previousEventIds: List[str]
         :param reconstructedId: The id of the event, if it's generated externally.
         :type reconstructedId: str
-        :param reconstructedPreviousEventIds: The id of the previous events, if an external event
-        is being reconstructed.
-        :type reconstructedPreviousEventIds: List[str]
         """
-        previous_events = None
-        if bootRequestedId:
-            previous_events = [bootRequestedId]
-        super().__init__(
-            previous_events, reconstructedId, reconstructedPreviousEventIds
-        )
+        super().__init__(previousEventIds, reconstructedId)
         self._def_url = defUrl
 
     @property
