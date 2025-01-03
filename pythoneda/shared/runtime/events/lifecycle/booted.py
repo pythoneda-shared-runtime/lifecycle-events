@@ -51,8 +51,8 @@ class Booted(Event):
         :param reconstructedId: The id of the event, if it's generated externally.
         :type reconstructedId: str
         """
-        super().__init__(previousEventIds, reconstructedId)
         self._def_url = defUrl
+        super().__init__(previousEventIds, reconstructedId)
 
     @property
     def def_url(self) -> str:
